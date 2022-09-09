@@ -1,11 +1,12 @@
 import React from "react";
-import pokemon from "../img/pokemon.png"
+import pokedex from "../img/pokedex.png";
+import './Navbar.css';
 
 export default function Navbar () {
   return (
     <nav>
       <div className='navbar-img'>
-        <img src={pokemon} alt='' />
+        <img src={pokedex} alt='img-pokedex' id='img-pokedex' />
       </div>
     </nav>
   )
