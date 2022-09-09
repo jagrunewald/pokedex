@@ -1,5 +1,5 @@
 import React from "react";
-import pokedex from "../img/pokedex.png";
+import pokedex from "../../img/pokedex.png";
 import './Navbar.css';
 
 export default function Navbar () {
