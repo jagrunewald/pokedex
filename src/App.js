@@ -1,13 +1,11 @@
-import * as React from "react";
-import { Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
+import Menu from './Components/Menu/Menu';
 
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Navbar />} />
-      </Routes>
+      <Navbar />
+      <Menu />
     </div>
   );
 }
