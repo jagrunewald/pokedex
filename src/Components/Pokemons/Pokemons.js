@@ -6,35 +6,44 @@ import './Pokemons.css';
 
 export default function Pokemons () {
   const [pokemons, setPokemons] = useState([]);
+  const [pokemonsSearch, setPokemonsSearch] = useState([]);
   const [pageStart, setPageStart] = useState(1);
+  const [pageEnd, setPageEnd] = useState(48);
   
-  const searchPokemon = (name) => {
+  const searchPokemon = async (name) => {
+    await fetchPokemonsSearch();
     var filterPokemons = [];
     if (name === '') {
       fetchPokemons();
     }
 
-    for (var i in pokemons) {
-      if(pokemons[i].data.name.includes(name)) {
-        filterPokemons.push(pokemons[i])
+    for (var i in pokemonsSearch) {
+      // console.log('pokemons for', pokemons);
+      if(pokemonsSearch[i].data.name.includes(name)) {
+        filterPokemons.push(pokemonsSearch[i])
       }
     }
+    console.log('filter', filterPokemons);
     setPokemons(filterPokemons);
+  }
+
+  const fetchPokemonsSearch = () => {
+    var endpoints = [];
+    for (var i = 1; i < 300; i++) {
+      endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
+    }
+    var result = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemonsSearch(res));
+    return result;
   }
 
   const fetchPokemons = () => {
     var endpoints = [];
-    for (var i = pageStart; i < (pageStart+48); i++) {
+    for (var i = pageStart; i < (pageStart+pageEnd); i++) {
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
     }
     var result = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
     return result;
   }
-
-  // const pagePokemons = (start, end) => {
-  //   setPageStart(start);
-  //   setPageEnd(end);
-  // }
 
   useEffect(() => {
     fetchPokemons();

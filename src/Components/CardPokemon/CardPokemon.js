@@ -9,9 +9,6 @@ export default function CardPokemon (props) {
   return (
     <div className='pokemon-card' style={{backgroundColor: handleBackgroundColor(pokemon.data.types[0].type.name), color: handleColor(pokemon.data.types[0].type.name)}}>
       <div className='container-img'>
-        {/* <div className='back-img'>
-          
-        </div> */}
         <img src={handleImg(pokemon.data.id)} alt='img' className='img'/>
       </div>
       <div className='container-name-types'>
