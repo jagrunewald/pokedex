@@ -14,7 +14,6 @@ export default function CardPokemon (props) {
       <div className='container-name-types'>
         <p className='name'>{pokemon.data.name.toUpperCase()}</p>
         <div className='container-types'>
-        {/* <p className='type'>{pokemon.data.types[1] ? pokemon.data.types[0] + ' | ' + pokemon.data.types[1] : pokemon.data.types[0]}</p> */}
           <p className='type'>{pokemon.data.types.map((type) => type.type.name).join(' | ')}</p>
         </div>
       </div>

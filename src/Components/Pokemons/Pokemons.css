@@ -7,7 +7,7 @@ body {
   width: 100%;
   /* background: #ffcb05; */
   background: rgb(201,186,249);
-background: linear-gradient(90deg, rgba(201,186,249,1) 0%, rgba(218,251,250,1) 29%, rgba(240,246,146,1) 100%);
+  background: linear-gradient(90deg, rgba(201,186,249,1) 0%, rgba(218,251,250,1) 29%, rgba(240,246,146,1) 100%);
   /* background-color: black; */
   /* height: 100vh;
   border: solid red; */
@@ -16,13 +16,10 @@ background: linear-gradient(90deg, rgba(201,186,249,1) 0%, rgba(218,251,250,1) 2
 .pokemons-menu {
   position: fixed;
   z-index: 1;
-  /* margin-top: 100px; */
-  /* background: #ffcb05; */
   background: rgb(201,186,249);
   background: linear-gradient(90deg, rgba(201,186,249,1) 0%, rgba(218,251,250,1) 29%, rgba(240,246,146,1) 100%);
-  /* background-color: black; */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end;
   width: 100%;
   height: 230px;
@@ -34,8 +31,9 @@ background: linear-gradient(90deg, rgba(201,186,249,1) 0%, rgba(218,251,250,1) 2
   border-radius: 10px;
   margin-top: 140px;
   margin-bottom: 25px;
-  width: 300px;
-  height: 32px;
+  margin-left: 120px;
+  width: 400px;
+  height: 38px;
 }
 
 .input-search {
@@ -44,29 +42,48 @@ background: linear-gradient(90deg, rgba(201,186,249,1) 0%, rgba(218,251,250,1) 2
   padding-left: 5px;
   font-size: 16px;
   border: none;
-  height: 30px;
-  width: 191px;
-}
-
-.btn-search {
-  border: none;
-  float: right;
-  height: 32px;
-  width: 70px;
-  font-weight: bold;
-  font-size: 14px;
-  color: #f6f6f6;
-  border-radius: 0 7px 7px 0;
-  background :#386abb;
+  margin-top: 5px;
+  height: 28px;
+  width: 350px;
 }
 
 .pokemons-search img {
   width: 20px;
   height: 20px;
   border-radius: 20%;
-  margin-top: 5px;
-  margin-left: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
   float: left;
+}
+
+.pokemons-pages {
+  margin-right: 130px;
+  margin-bottom: 25px;
+  text-align: end;
+}
+
+.pokemons-pages .page {
+  margin-left: 10px;
+  height: 28px;
+  border: solid 1px hotpink;
+  border-radius: 20%;
+  background-color:#f6f6f6;
+  font-weight: bold;
+}
+
+.pokemons-pages .page:hover {
+  background-color: hotpink;
+  color: white;
+}
+
+.pokemons-pages .page-active {
+  margin-left: 10px;
+  height: 28px;
+  border: solid 1px hotpink;
+  border-radius: 20%;
+  background-color:hotpink;
+  color: white;
+  font-weight: bold;
 }
 
 .pokemons-all {
