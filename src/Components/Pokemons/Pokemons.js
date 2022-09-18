@@ -23,7 +23,7 @@ export default function Pokemons () {
 
   const fetchPokemons = () => {
     var endpoints = [];
-    for (var i = 1; i < 49; i++) {
+    for (var i = 1; i < 400; i++) {
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
     }
     var result = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
