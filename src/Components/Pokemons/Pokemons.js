@@ -6,6 +6,7 @@ import './Pokemons.css';
 
 export default function Pokemons () {
   const [pokemons, setPokemons] = useState([]);
+  const [pageStart, setPageStart] = useState(1);
   
   const searchPokemon = (name) => {
     var filterPokemons = [];
@@ -23,16 +24,25 @@ export default function Pokemons () {
 
   const fetchPokemons = () => {
     var endpoints = [];
-    for (var i = 1; i < 400; i++) {
+    for (var i = pageStart; i < (pageStart+48); i++) {
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
     }
     var result = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
     return result;
   }
 
+  // const pagePokemons = (start, end) => {
+  //   setPageStart(start);
+  //   setPageEnd(end);
+  // }
+
   useEffect(() => {
     fetchPokemons();
   },[]);
+
+  useEffect(() => {
+    fetchPokemons();
+  },[pageStart]);
 
   return (
     <div className='pokemons'>
@@ -45,6 +55,14 @@ export default function Pokemons () {
             placeholder='Search...'
             onChange={(e) => searchPokemon(e.target.value)}
           />
+        </div>
+        <div className='pokemons-pages'>
+          <button type='button' className='page' onClick={() => setPageStart(1)}>1</button>
+          <button type='button' className='page' onClick={() => setPageStart(49)}>2</button>
+          <button type='button' className='page' onClick={() => setPageStart(97)}>3</button>
+          <button type='button' className='page' onClick={() => setPageStart(145)}>4</button>
+          <button type='button' className='page' onClick={() => setPageStart(193)}>5</button>
+          <button type='button' className='page' onClick={() => setPageStart(241)}>6</button>
         </div>
       </div>
       <div className='pokemons-all'>
