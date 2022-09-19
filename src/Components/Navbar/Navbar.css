@@ -23,3 +23,18 @@ nav {
   height: 50px;
   margin-right: 20px;
 }
+
+@media screen and (max-width: 600px) {
+  nav {
+    height: 70px;
+  }
+  
+  .navbar-img {
+    height: 70px;
+  }
+  
+  #img-pokedex {
+    width: 120px;
+    height: 40px;
+  }
+}

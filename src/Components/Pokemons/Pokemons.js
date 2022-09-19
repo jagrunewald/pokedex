@@ -56,11 +56,6 @@ export default function Pokemons () {
     pages[ident].className='page-active';
   }
 
-  const onClick = (type) => {
-    console.log(type)
-  }
-
-
   useEffect(() => {
     fetchPokemons();
   },[]);
@@ -73,13 +68,15 @@ export default function Pokemons () {
     <div className='pokemons'>
       <div className='pokemons-menu'>
         <div className='pokemons-search'>
-          <img src={imgSearch} alt='Search Pokemon...'/>
-          <input
-            type='text'
-            className='input-search'
-            placeholder='Search Pokemon...'
-            onChange={(e) => searchPokemon(e.target.value)}
-          />
+          <div className='container-search'>
+            <img src={imgSearch} alt='Search Pokemon...'/>
+            <input
+              type='text'
+              className='input-search'
+              placeholder='Search Pokemon...'
+              onChange={(e) => searchPokemon(e.target.value)}
+            />
+          </div>
         </div>
         <div className='pokemons-pages' ref={containerRef}>
           <button type='button' className='page-active' id='0' onClick={(e) => {setPageStart(1); handleClass(e.target.id);}}>1</button>
