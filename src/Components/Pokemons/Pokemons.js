@@ -12,14 +12,16 @@ export default function Pokemons () {
   const containerRef = useRef();
   
   const searchPokemon = async (name) => {
+    const nameLower = name.toLowerCase();
+    console.log(nameLower);
     await fetchPokemonsSearch();
     var filterPokemons = [];
-    if (name === '') {
+    if (nameLower === '') {
       fetchPokemons();
     }
 
     for (var i in pokemonsSearch) {
-      if(pokemonsSearch[i].data.name.includes(name)) {
+      if(pokemonsSearch[i].data.name.includes(nameLower)) {
         filterPokemons.push(pokemonsSearch[i])
       }
     }
