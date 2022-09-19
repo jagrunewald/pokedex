@@ -9,7 +9,7 @@ body {
   background: linear-gradient(90deg, rgba(201,186,249,1) 0%, rgba(218,251,250,1) 29%, rgba(240,246,146,1) 100%);
 }
 
-.pokemons-menu {
+.pokemons .pokemons-menu {
   position: fixed;
   z-index: 1;
   background: rgb(201,186,249);
@@ -21,7 +21,7 @@ body {
   height: 230px;
 }
 
-.container-search {
+.pokemons .pokemons-menu .pokemons-search .container-search {
   background-color:#f6f6f6;
   border: solid 1px rgb(179, 178, 178);
   border-radius: 10px;
@@ -32,7 +32,7 @@ body {
   height: 38px;
 }
 
-.input-search {
+.pokemons .pokemons-menu .pokemons-search .container-search .input-search {
   float: left;
   background-color:#f6f6f6;
   padding-left: 5px;
@@ -43,7 +43,7 @@ body {
   width: 250px;
 }
 
-.container-search img {
+.pokemons .pokemons-menu .pokemons-search .container-search img {
   width: 20px;
   height: 20px;
   border-radius: 20%;
@@ -52,13 +52,13 @@ body {
   float: left;
 }
 
-.pokemons-pages {
+.pokemons .pokemons-menu .pokemons-pages {
   margin-right: 130px;
   margin-bottom: 25px;
   text-align: end;
 }
 
-.pokemons-pages .page {
+.pokemons .pokemons-menu .pokemons-pages .page {
   margin-left: 10px;
   height: 28px;
   border: solid 1px hotpink;
@@ -67,12 +67,12 @@ body {
   font-weight: bold;
 }
 
-.pokemons-pages .page:hover {
+.pokemons .pokemons-menu .pokemons-pages .page:hover {
   background-color: hotpink;
   color: white;
 }
 
-.pokemons-pages .page-active {
+.pokemons .pokemons-menu .pokemons-pages .page-active {
   margin-left: 10px;
   height: 28px;
   border: solid 1px hotpink;
@@ -82,7 +82,7 @@ body {
   font-weight: bold;
 }
 
-.pokemons-all {
+.pokemons .pokemons-all {
   display: flex;
   width: 100%;
   margin: 250px 50px 50px 50px;
@@ -91,8 +91,7 @@ body {
   align-items: space-between;
 }
 
-.pokemon-card {
-  /* display: flex; */
+.pokemons .pokemons-all .pokemon-card {
   text-align: center;
   width: 150px;
   height: 220px;
@@ -102,7 +101,15 @@ body {
   box-shadow: 0 3px 15px rgb(97, 96, 96, 0.5);
 }
 
-.container-name-types {
+.pokemons .pokemons-all .pokemon-card .container-img {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+  text-align: center;
+}
+
+.pokemons .pokemons-all .pokemon-card .container-name-types {
   display: flex;
   width: 100%;
   height: 50%;
@@ -111,98 +118,94 @@ body {
   justify-content: center;
 }
 
-.container-types {
-  display: flex;
-}
-
-.container-img {
-  display: flex;
-  width: 100%;
-  height: 50%;
-  justify-content: center;
-  text-align: center;
-}
-
-.name {
+.pokemons .pokemons-all .pokemon-card .container-name-types .name {
   width: 100%;
   font-weight: bolder;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 0px;
 }
 
-.type {
+.pokemons .pokemons-all .pokemon-card .container-name-types .container-types {
+  display: flex;
+}
+
+.pokemons .pokemons-all .pokemon-card .container-name-types .container-types .type {
   width: 100%;
   font-weight: bold;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
-
+  margin-top: 0px;
 }
 
 @media screen and (max-width: 600px) {
-  .pokemons-menu {
+  .pokemons .pokemons-menu {
     display: block;
     height: 200px;
   }
 
-  .pokemons-menu .pokemons-search {
+  .pokemons .pokemons-menu .pokemons-search {
     display: flex;
     width: 100%;
     height: 70%;
   }
 
-  .pokemons-menu .pokemons-search .container-search {
+  .pokemons .pokemons-menu .pokemons-search .container-search {
     margin: auto;
-    margin-top: 90px;
+    margin-top: 100px;
     width: 230px;
     height: 38px;
   }
   
-  .input-search {
+  .pokemons .pokemons-menu .pokemons-search .container-search .input-search {
     font-size: 14px;
     margin-top: 5px;
     height: 28px;
     width: 180px;
   }
   
-  .pokemons-pages {
+  .pokemons .pokemons-menu .pokemons-pages {
     margin-bottom: 25px;
     width: 100%;
     height: 25%;
     text-align: center;
   }
 
-  .page {
-    margin-top: 10px;
+  .pokemons .pokemons-menu .pokemons-pages .page {
+    margin-top: 20px;
   }
 
-  .pokemons-all {
+  .pokemons .pokemons-all {
     margin: 210px 5px 20px 5px;
   }
 
-  .pokemon-card {
+  .pokemons .pokemons-all .pokemon-card {
     width: 120px;
     height: 190px;
     margin: 10px;
     padding: 10px;
   }  
    
-  .container-img .back-img img {
+  .pokemons .pokemons-all .pokemon-card .container-img .img {
     width: 70px;
     height: 70px;
     margin-top: 10px;
+    margin-bottom: 0px;
   }
 
   .name {
     padding-top: 0px;
     padding-bottom: 0px;
+    margin-top: 0px;
     margin-bottom: 0px;
   }
 
   .type {
     padding-top: 0px;
-    padding-bottom: 0px;  
+    padding-bottom: 0px;
+    margin-top: 0px;
   }  
  
 }

@@ -13,12 +13,11 @@ nav {
   width: 100%;
   height: 100px;
   justify-content: center;
-  /* border-bottom: solid 1px #356abc; */
   border-bottom: solid 1px rgb(179, 178, 178);
   box-shadow: 5px 5px 20px rgb(179, 178, 178);
 }
 
-#img-pokedex {
+.navbar-img #img-pokedex {
   width: 180px;
   height: 50px;
   margin-right: 20px;
@@ -33,8 +32,9 @@ nav {
     height: 70px;
   }
   
-  #img-pokedex {
+  .navbar-img #img-pokedex {
     width: 120px;
     height: 40px;
   }
+
 }
