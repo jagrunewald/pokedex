@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import CardPokemon from '../CardPokemon/CardPokemon';
+import Navbar from '../../Components/Navbar/Navbar';
+import CardPokemon from '../../Components/CardPokemon/CardPokemon';
 import imgSearch from '../../img/search.png';
 import './Pokemons.css';
 
@@ -68,6 +69,7 @@ export default function Pokemons () {
 
   return (
     <div className='pokemons'>
+      <Navbar />
       <div className='pokemons-menu'>
         <div className='pokemons-search'>
           <div className='container-search'>

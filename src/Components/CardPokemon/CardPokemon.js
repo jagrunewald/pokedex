@@ -6,8 +6,16 @@ import handleImg from '../../helpers/handleImg';
 export default function CardPokemon (props) {
   const {pokemon} = props;
 
+  const cardSelect = (id) => {
+    console.log('id', id);
+  }
+
   return (
-    <div className='pokemon-card' style={{backgroundColor: handleBackgroundColor(pokemon.data.types[0].type.name), color: handleColor(pokemon.data.types[0].type.name)}}>
+    <div
+      className='pokemon-card'
+      style={{backgroundColor: handleBackgroundColor(pokemon.data.types[0].type.name), color: handleColor(pokemon.data.types[0].type.name)}}
+      onClick={() => cardSelect(pokemon.data.id)}
+    >
       <div className='container-img'>
         <img src={handleImg(pokemon.data.id)} alt='img' className='img'/>
       </div>
@@ -16,8 +24,7 @@ export default function CardPokemon (props) {
         <div className='container-types'>
           <p className='type'>{pokemon.data.types.map((type) => type.type.name).join(' | ')}</p>
         </div>
-      </div>
-      
+      </div>      
     </div>
   );
 };
