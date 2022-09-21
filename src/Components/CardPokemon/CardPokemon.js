@@ -9,7 +9,6 @@ export default function CardPokemon (props) {
   const navigate = useNavigate();
 
   const cardSelect = (pokemon) => {
-    console.log('pokemon', pokemon);
     navigate('/pokemondetails', { state: pokemon });
   }
 

@@ -14,9 +14,9 @@ export default function Pokemons () {
   
   const searchPokemon = async (name) => {
     const nameLower = name.toLowerCase();
-    console.log(nameLower);
     await fetchPokemonsSearch();
     var filterPokemons = [];
+  
     if (nameLower === '') {
       fetchPokemons();
     }

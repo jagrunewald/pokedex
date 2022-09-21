@@ -1,0 +1,63 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.pokemon-details {
+  width: 100%;
+}
+
+.pokemon-details .pokemon-details-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 180px;
+}
+
+.pokemon-details .pokemon-details-menu .button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: none;
+  width: 40px;
+  height: 25px;
+  border-radius: 10%;
+  margin-left: 40px;
+}
+
+.pokemon-details .pokemon-details-menu .button svg {
+  font-size: 40px;
+  color: black;
+}
+
+.pokemon-details .container-pokemon-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 180px);
+}
+
+.pokemon-details .container-pokemon-details .container-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.pokemon-details .container-pokemon-details .container-img .img {
+  width: 350px;
+  height: 350px;
+}
+
+.pokemon-details .container-pokemon-details .card-pokemon-details {
+  width: 50%;
+  height: 100%;
+  border: solid red;
+}
+
+.pokemon-details .container-pokemon-details .card-pokemon-details .name {
+  font-weight: bold;
+  border: solid red;
+}

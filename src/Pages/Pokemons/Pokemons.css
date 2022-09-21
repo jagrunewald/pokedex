@@ -7,8 +7,8 @@ body {
 .pokemons {
   display: flex;
   width: 100%;
-  background: rgb(201,186,249);
-  background: linear-gradient(90deg, rgba(201,186,249,1) 0%, rgba(218,251,250,1) 29%, rgba(240,246,146,1) 100%);
+  /* background: rgb(201,186,249);
+  background: linear-gradient(90deg, rgba(201,186,249,1) 0%, rgba(218,251,250,1) 29%, rgba(240,246,146,1) 100%); */
 }
 
 .pokemons .pokemons-menu {
