@@ -14,7 +14,6 @@ export default function PokemonDetails () {
   const location = useLocation();
   const pokemon = location.state;
   const navigate = useNavigate();
-  console.log(pokemon);
 
   const onClick = () => {
     navigate('/');
@@ -29,7 +28,6 @@ export default function PokemonDetails () {
       <div className='container-pokemon-details' style={{color: handleColor(pokemon.types[0].type.name)}}>
         <div className='container-img'>
           <h1 className='name'>{pokemon.name.toUpperCase()} | {handleId(pokemon.id)}</h1>
-          {/* <h3 className='id'>{handleId(pokemon.id)}</h3> */}
           <p className='type'>{pokemon.types.map((type) => type.type.name).join(' | ')}</p>
           <img src={handleImg(pokemon.id)} alt='img' className='img'/>
         </div>

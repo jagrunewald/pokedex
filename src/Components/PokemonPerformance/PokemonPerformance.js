@@ -6,7 +6,6 @@ import './PokemonPerformance.css';
 
 export default function PokemonPerformance (props) {
   const {pokemon} = props;
-  console.log(pokemon);
 
   const handleWidth = (base_stat) => {    
     if(base_stat > 100) {
