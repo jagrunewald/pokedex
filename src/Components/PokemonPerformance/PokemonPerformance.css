@@ -1,0 +1,54 @@
+.performance {
+  /* background-color: white; */
+  border: solid 1px gray;
+  border-radius: 5%;
+  box-shadow: 0 3px 15px rgb(97, 96, 96, 0.5);
+  width: 600px;
+  padding: 5px 20px 10px 20px;
+  height: 470px;  
+}
+
+.container-performance {
+  margin-bottom: 35px;
+  position: relative;
+  overflow-x:hidden;
+}
+
+.container-performance > p {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.container-performance:before {
+  width: 120%;
+  height: 10px;
+  content: "";
+  display: block;
+  position: absolute;
+  background: #959595;
+  bottom: 0;
+}
+
+.progress-bar {
+  height: 10px;
+  display: block;
+  position: relative;
+}
+
+.progress-bar span {
+  position: absolute;
+  top: -25px;
+  padding: 0;
+  font-size: 18px;
+  padding: 3px 0;
+  font-weight: 500;
+}
+
+.progress-bar {
+  position: relative;
+}
+
+.prog .progress-count {
+  right: 0;
+}
