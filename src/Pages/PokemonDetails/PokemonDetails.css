@@ -74,3 +74,16 @@ body {
 .pokemon-details .container-pokemon-details .card-pokemon-details h3 {
   margin-top: 30px;
 }
+
+.pokemon-details .container-pokemon-details .card-pokemon-details .title {
+  margin-bottom: 0px;
+}
+
+.pokemon-details .container-pokemon-details .card-pokemon-details .experience {
+  margin-top: 0px;
+}
+
+.pokemon-details .container-pokemon-details .card-pokemon-details .ability {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}

@@ -34,9 +34,9 @@ export default function PokemonDetails () {
           <img src={handleImg(pokemon.id)} alt='img' className='img'/>
         </div>
         <div className='card-pokemon-details'>
-          <h3>EXPERIENCE</h3>
+          <h3 className='title'>EXPERIENCE</h3>
           <p className='experience'>{pokemon.base_experience}</p>
-          <h3>ABILITY</h3>
+          <h3 className='title'>ABILITY</h3>
           <p className='ability'>{pokemon.abilities.map((ability) => ability.ability.name).join(' | ')}</p>
           <PokemonPerformance pokemon={pokemon} />
         </div>
