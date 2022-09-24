@@ -31,7 +31,7 @@ export default function PokemonDetails () {
           <p className='type'>{pokemon.types.map((type) => type.type.name).join(' | ')}</p>
           <img src={handleImg(pokemon.id)} alt='img' className='img'/>
         </div>
-        <div className='card-pokemon-details'>
+        <div className='card-pokemon-details' style={{backgroundColor: handleBackgroundColor(pokemon.types[0].type.name)}}>
           <h3 className='title'>EXPERIENCE</h3>
           <p className='experience'>{pokemon.base_experience}</p>
           <h3 className='title'>ABILITY</h3>
