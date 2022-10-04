@@ -1,26 +1,46 @@
-## :large_blue_circle: Pokédex
+![Image](https://github.com/jagrunewald/pokedex/blob/master/public/pokedex.png)
 
 ### Deploy
 
-click here: https://jagrunewald.github.io/pokedex
+Clique aqui: [Pokédex](https://jagrunewald.github.io/pokedex)
 
-### Projeto
+### :computer: Projeto
 
 Front-End | Este projeto trata-se de uma aplicação Pokédex que lista Pokemons. A pessoa usuária poderá realizar buscas pelo nome de pokemons, sendo possível visualizar detalhes sobre o pokemon selecionado.
 
-#### Neste projeto, foram utilizadas as seguintes habilidades:
+</br>
 
--Requisições e consumir dados vindos de uma API;
+#### :small_orange_diamond: Página inicial
 
--Utilização dos ciclos de vida de um componente React;
+![Image](https://github.com/jagrunewald/pokedex/blob/master/public/pokedex-page.png)
 
--Utilização de Hooks para gerenciamento de estados;
+</br>
+
+#### :small_orange_diamond: Página de detalhes do Pokemon
+
+![Image](https://github.com/jagrunewald/pokedex/blob/master/public/pokemon-details.png)
+
+</br>
+
+#### :small_blue_diamond: Neste projeto, foram utilizadas as seguintes habilidades:
+
+</br>
+
+- HTML | CSS | JavaScript | React
+
+- Utilização de componentes funcionais;
+
+- React-router-dom para gerenciar rotas;
+
+- Utilização de React Hooks para gerenciamento de estados;
+
+- Requisições e consumo de dados vindos da API **PokeAPI** (mais informações sobre a API [aqui](https://pokeapi.co/)).
 
 
+</br>
 
 
-
-### Rodando o projeto localmente
+### :computer: Rodando o projeto localmente
 
 Clone o projeto
 
