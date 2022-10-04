@@ -12,13 +12,13 @@ Front-End | Este projeto trata-se de uma aplicação Pokédex que lista Pokemons
 
 #### :small_orange_diamond: Página inicial
 
-![Image](https://github.com/jagrunewald/pokedex/blob/master/public/pokedex-page.png)
+![Image](https://github.com/jagrunewald/pokedex/blob/master/public/page-pokedex.png)
 
 </br>
 
 #### :small_orange_diamond: Página de detalhes do Pokemon
 
-![Image](https://github.com/jagrunewald/pokedex/blob/master/public/pokemon-details.png)
+![Image](https://github.com/jagrunewald/pokedex/blob/master/public/details-pokemon.png)
 
 </br>
 
